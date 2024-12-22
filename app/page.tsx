@@ -47,15 +47,25 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Toggle Button */}
+        {/* Line */}
         <div className="absolute top-0 left-0 h-full w-[1px] bg-gray-300 z-0"></div>
 
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white border rounded-full flex items-center justify-center shadow-sm z-10"
-        >
-          {isExpanded ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
-        </button>
+        {/* Toggle Button */}
+        <div className="absolute -left-32 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
+          <span className="text-sm text-gray-200 whitespace-nowrap">
+            {isExpanded ? "Hide Panel" : "Show Panel"}
+          </span>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-8 h-8 bg-white border rounded-full flex items-center justify-center shadow-sm z-10"
+          >
+            {isExpanded ? (
+              <ChevronRight size={16} />
+            ) : (
+              <ChevronLeft size={16} />
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

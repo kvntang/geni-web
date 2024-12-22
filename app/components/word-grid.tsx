@@ -47,7 +47,7 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
               onChange={(e) => handleChange(index, e.target.value)}
               placeholder={`${index + 1}`}
               className={cn(
-                "h-24 w-24 text-lg text-center rounded-md focus:outline-none border-2",
+                "h-24 w-24 text-lg text-center rounded-2xl focus:outline-none border-2",
                 input === ""
                   ? "bg-gray-200 border-gray-300"
                   : "bg-green-100 hover:bg-green-200 border-green-300 text-gray-700"

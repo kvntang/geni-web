@@ -93,7 +93,7 @@ export function ChatArea({ currentInputs }: { currentInputs: string[] }) {
           {/* Story Message and Delete Button */}
           <div className="flex items-start gap-1">
             {/* Big White Div */}
-            <div className="bg-white rounded-2xl p-2 flex-1 space-y-4">
+            <div className="bg-white rounded-2xl p-4 flex-1 space-y-4">
               <div className="flex items-start gap-4">
                 <Avatar>
                   <AvatarFallback>G</AvatarFallback>
