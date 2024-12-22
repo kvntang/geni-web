@@ -74,7 +74,7 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
         </div>
 
         {(isLoading || showAudioPlayer) && (
-          <div className="bg-white border rounded-lg p-2 mt-6">
+          <div className="bg-white border rounded-2xl p-2 mt-6">
             {isLoading ? (
               <div className="flex items-center justify-center h-12 text-gray-500 text-sm">
                 Loading<span className="animate-pulse">...</span>
@@ -94,11 +94,19 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
                   </button>
                 </div>
                 {lastPlayedInputs.length > 0 && (
-                  <div className="mt-2 text-sm text-gray-600">
-                    Inputs:{" "}
+                  <div className="mt-2 text-sm text-gray-600 flex gap-2 mt-1">
+                    <div className="px-2 py-1">Last Inputs:</div>
+
                     {lastPlayedInputs
                       .filter((input) => input !== "")
-                      .join(", ")}
+                      .map((input, index) => (
+                        <div
+                          key={index}
+                          className="px-2 py-1 bg-green-100 text-gray-800 rounded-2xl border border-green-300"
+                        >
+                          {input}
+                        </div>
+                      ))}
                   </div>
                 )}
               </>
