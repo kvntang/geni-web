@@ -48,7 +48,7 @@ export function ChatArea({ currentInputs }: { currentInputs: string[] }) {
         return (
           <span
             key={partIndex}
-            className="inline-block relative bg-yellow-200 px-2 py-1 rounded text-blue-800"
+            className="inline-block relative bg-yellow-200 px-1 py-1 rounded text-green-800"
           >
             <span className="text-[10px] block opacity-100">
               {highlights[part]}
@@ -77,10 +77,10 @@ export function ChatArea({ currentInputs }: { currentInputs: string[] }) {
     <div className="space-y-8">
       {storyVersions.map((version, index) => (
         <div key={index}>
-          <div className="bg-blue-100 border border-blue-300 text-gray-700 p-4 rounded-lg text-black w-fit text-right ml-auto">
+          <div className="bg-green-100 border border-green-300 text-gray-700 p-4 rounded-2xl text-black w-fit text-right ml-auto">
             {version.input}
           </div>
-          <div className="bg-white rounded-lg p-6 space-y-4">
+          <div className="bg-white rounded-2xl p-6 space-y-4">
             <div className="flex items-start gap-4">
               <Avatar>
                 <AvatarFallback>G</AvatarFallback>
@@ -89,14 +89,14 @@ export function ChatArea({ currentInputs }: { currentInputs: string[] }) {
                 <div className="prose">
                   <div>{renderProse(version)}</div>
                 </div>
-                <div className="bg-white border rounded-lg p-2">
+                <div className="bg-white border rounded-2xl p-2">
                   <div className="flex items-center gap-2 p-2">
                     <button className="text-sm text-gray-500">
                       <PlayIcon className="h-4 w-4" />
                     </button>
                     <div className="text-xs text-gray-500">0:00 / 0:38</div>
                     <div className="flex-1 h-1 bg-gray-200 rounded-full">
-                      <div className="w-0 h-full bg-blue-500 rounded-full" />
+                      <div className="w-0 h-full bg-green-500 rounded-full" />
                     </div>
                     <button className="text-sm text-gray-500">
                       <VolumeIcon className="h-4 w-4" />
