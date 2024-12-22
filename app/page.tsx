@@ -24,7 +24,14 @@ export default function Page() {
         )}
       >
         <div className="p-8 overflow-auto text-center">
-          <h1 className="text-4xl font-light text-green-500 mb-8">Geni</h1>
+          <div className="flex flex-col items-center p-10">
+            <div className="flex items-center gap-2">
+              <h1 className="text-4xl font-light text-green-500">Geni</h1>
+              <div className="px-1 py-0.5 bg-green-100 text-green-600 text-xs rounded-2xl border border-green-300">
+                web
+              </div>
+            </div>
+          </div>
           <WordGrid onPlay={handlePlay} />
         </div>
       </div>
