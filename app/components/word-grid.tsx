@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils";
 import { PlayIcon } from "lucide-react";
 
 export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
-  const inputRefs = useRef(Array(6).fill(null));
-  const [inputs, setInputs] = useState(Array(6).fill(""));
+  const inputRefs = useRef<(HTMLInputElement | null)[]>(Array(6).fill(null));
+  const [inputs, setInputs] = useState<string[]>(Array(6).fill(""));
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [lastPlayedInputs, setLastPlayedInputs] = useState<string[]>([]);
 
-  const handleChange = (index, value) => {
+  const handleChange = (index: number, value: string) => {
     const updatedInputs = [...inputs];
     updatedInputs[index] = value;
     setInputs(updatedInputs);
@@ -40,7 +40,9 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
           {inputs.map((input, index) => (
             <input
               key={index}
-              ref={(el) => (inputRefs.current[index] = el)}
+              ref={(el) => {
+                inputRefs.current[index] = el; // Correctly sets the ref without returning a value
+              }}
               value={input}
               onChange={(e) => handleChange(index, e.target.value)}
               placeholder={`${index + 1}`}
