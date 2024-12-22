@@ -50,7 +50,7 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
                 "h-24 w-24 text-lg text-center rounded-md focus:outline-none border-2",
                 input === ""
                   ? "bg-gray-200 border-gray-300"
-                  : "bg-blue-100 hover:bg-blue-200 border-blue-300 text-gray-700"
+                  : "bg-green-100 hover:bg-green-200 border-green-300 text-gray-700"
               )}
             />
           ))}
@@ -58,7 +58,7 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
         <div className="flex flex-col items-center mt-6">
           <div className="flex gap-2">
             <button
-              className="w-32 h-12 rounded-full bg-blue-100 hover:bg-blue-200 text-gray-700 flex items-center justify-center"
+              className="w-32 h-12 rounded-full bg-green-100 hover:bg-green-200 text-gray-700 flex items-center justify-center"
               onClick={handlePlayButtonClick}
             >
               <PlayIcon className="mr-2 h-4 w-4" />
@@ -87,7 +87,7 @@ export function WordGrid({ onPlay }: { onPlay: (inputs: string[]) => void }) {
                   </button>
                   <div className="text-xs text-gray-500">0:00 / 0:38</div>
                   <div className="flex-1 h-1 bg-gray-200 rounded-full">
-                    <div className="w-0 h-full bg-blue-500 rounded-full" />
+                    <div className="w-0 h-full bg-green-500 rounded-full" />
                   </div>
                   <button className="p-1">
                     <PlayIcon className="h-4 w-4" />

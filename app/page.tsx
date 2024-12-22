@@ -25,7 +25,7 @@ export default function Page() {
         )}
       >
         <div className="p-8 overflow-auto text-center">
-          <h1 className="text-4xl font-light text-blue-300 mb-8">Geni</h1>
+          <h1 className="text-4xl font-light text-green-300 mb-8">Geni</h1>
           <WordGrid onPlay={handlePlay} />
         </div>
       </div>
